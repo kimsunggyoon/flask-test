@@ -10,9 +10,8 @@ app = Flask(__name__)
 def make_predict():
     request_body = request.get_json(force=True)
 
-    x_test[request_body['sepal_length'], request_body['sepal_width'],
-           request_body['petal_lenght'],request_body['petal_width']
-           ]
+    x_test = [request_body['sepal_length'], request_body['sepal_width'],
+               request_body['petal_lenght'],request_body['petal_width']]
     
     x_test = np.array(x_test)
     x_test = x_test.reshape(1,-1)
