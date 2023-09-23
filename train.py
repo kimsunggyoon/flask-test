@@ -13,7 +13,7 @@ data =load_iris()
 X = data['data']
 Y = data['target']
 
-x_train,x_test,y_train,y_test = train_test_split(X,Y, test_size=0.3,ramdom_state=RANDOM_SEED)
+x_train,x_test,y_train,y_test = train_test_split(X,Y, test_size=0.3)
 
 model = RandomForestClassifier(n_estimators=100, random_state=RANDOM_SEED)
 model.fit(x_train,y_train)
