@@ -10,7 +10,7 @@ RANDOM_SEED = 1234
 
 data =load_iris()
 
-X = data.['data']
+X = data['data']
 Y = data['target']
 
 x_train,x_test,y_train,y_test = train_test_split(X,Y, test_size=0.3,ramdom_state=RANDOM_SEED)
