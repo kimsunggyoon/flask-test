@@ -20,5 +20,7 @@ def make_predict():
 
     response_body = jsonify(result=y_test.tolist())
 
+    return response_body
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=55000,debug=True)
