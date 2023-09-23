@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 from flask import Flask,jsonify,request
 
-model = pickle.load(open('./build/model_pkl','rb'))
+model = pickle.load(open('./build/model.pkl','rb'))
 
 app = Flask(__name__)
 
@@ -23,4 +23,3 @@ def make_predict():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=55000,debug=True)
-    
